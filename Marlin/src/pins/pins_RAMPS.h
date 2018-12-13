@@ -180,7 +180,7 @@
   #define Y2_SERIAL_RX_PIN   -1
 
   #define Z_SERIAL_TX_PIN    42
-  #define Z_SERIAL_RX_PIN    65
+  #define Z_SERIAL_RX_PIN    -1
   #define Z2_SERIAL_TX_PIN   -1
   #define Z2_SERIAL_RX_PIN   -1
 
