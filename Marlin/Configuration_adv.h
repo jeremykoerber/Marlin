@@ -1252,7 +1252,7 @@
   //#define Y2_SENSE_RESISTOR   91
   //#define Y2_MICROSTEPS       16
 
-  #define Z_MAX_CURRENT       1000
+  #define Z_MAX_CURRENT       900
   #define Z_SENSE_RESISTOR    91
   #define Z_MICROSTEPS        16
 
@@ -1264,7 +1264,7 @@
   //#define Z3_SENSE_RESISTOR   91
   //#define Z3_MICROSTEPS       16
 
-  #define E0_MAX_CURRENT      800
+  #define E0_MAX_CURRENT      1000
   #define E0_SENSE_RESISTOR   91
   #define E0_MICROSTEPS       16
 
@@ -1319,7 +1319,7 @@
   #define Y_CURRENT           1000
   #define Y_MICROSTEPS        16
 
-  #define Z_CURRENT           1000
+  #define Z_CURRENT           900
   #define Z_MICROSTEPS        16
 
   //#define X2_CURRENT           800
@@ -1423,7 +1423,7 @@
 
   #define X_HYBRID_THRESHOLD      100  // [mm/s]
   #define X2_HYBRID_THRESHOLD     100
-  #define Y_HYBRID_THRESHOLD      41
+  #define Y_HYBRID_THRESHOLD      100
   #define Y2_HYBRID_THRESHOLD     100
   #define Z_HYBRID_THRESHOLD      51
   #define Z2_HYBRID_THRESHOLD     51
@@ -1459,7 +1459,7 @@
 
   #if ENABLED(SENSORLESS_HOMING) || ENABLED(SENSORLESS_PROBING)
     #define X_STALL_SENSITIVITY  3
-    #define Y_STALL_SENSITIVITY  3
+    #define Y_STALL_SENSITIVITY  6
     #define Z_STALL_SENSITIVITY  3
 
   #endif
