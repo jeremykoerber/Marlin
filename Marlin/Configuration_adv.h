@@ -448,7 +448,7 @@
 #define DEFAULT_STEPPER_DEACTIVE_TIME 120
 #define DISABLE_INACTIVE_X true
 #define DISABLE_INACTIVE_Y true
-#define DISABLE_INACTIVE_Z true  // set to false if the nozzle will fall down on your printed part when print has finished.
+#define DISABLE_INACTIVE_Z false  // set to false if the nozzle will fall down on your printed part when print has finished.
 #define DISABLE_INACTIVE_E true
 
 #define DEFAULT_MINIMUMFEEDRATE       0.0     // minimum feedrate
@@ -485,9 +485,9 @@
 //
 // Use Junction Deviation instead of traditional Jerk Limiting
 //
-#define JUNCTION_DEVIATION
+//#define JUNCTION_DEVIATION
 #if ENABLED(JUNCTION_DEVIATION)
-  #define JUNCTION_DEVIATION_MM 0.02  // (mm) Distance from real junction edge
+  #define JUNCTION_DEVIATION_MM 0.04  // (mm) Distance from real junction edge
 #endif
 
 //
@@ -1319,7 +1319,7 @@
   #define Y_CURRENT           1000
   #define Y_MICROSTEPS        16
 
-  #define Z_CURRENT           900
+  #define Z_CURRENT           1000
   #define Z_MICROSTEPS        16
 
   //#define X2_CURRENT           800
@@ -1458,8 +1458,8 @@
   //#define SENSORLESS_PROBING // TMC2130 only
 
   #if ENABLED(SENSORLESS_HOMING) || ENABLED(SENSORLESS_PROBING)
-    #define X_STALL_SENSITIVITY  6
-    #define Y_STALL_SENSITIVITY  6
+    #define X_STALL_SENSITIVITY  5
+    #define Y_STALL_SENSITIVITY  5
     #define Z_STALL_SENSITIVITY  3
 
   #endif
