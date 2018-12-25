@@ -329,7 +329,7 @@
   #endif
 #endif
 
-//#define Z_DUAL_STEPPER_DRIVERS
+#define Z_DUAL_STEPPER_DRIVERS
 #if ENABLED(Z_DUAL_STEPPER_DRIVERS)
   //#define Z_DUAL_ENDSTOPS
   #if ENABLED(Z_DUAL_ENDSTOPS)
@@ -412,10 +412,10 @@
  * Z Steppers Auto-Alignment
  * Add the G34 command to align multiple Z steppers using a bed probe.
  */
-//#define Z_STEPPER_AUTO_ALIGN
+#define Z_STEPPER_AUTO_ALIGN
 #if ENABLED(Z_STEPPER_AUTO_ALIGN)
   // Define probe X and Y positions for Z1, Z2 [, Z3]
-  #define Z_STEPPER_ALIGN_X { 10, 150 }
+  #define Z_STEPPER_ALIGN_X { 10, 290 }
   #define Z_STEPPER_ALIGN_Y { 290, 10}
   // Set number of iterations to align
   #define Z_STEPPER_ALIGN_ITERATIONS 3
@@ -1256,9 +1256,9 @@
   #define Z_SENSE_RESISTOR    91
   #define Z_MICROSTEPS        16
 
-  //#define Z2_MAX_CURRENT      1000
-  //#define Z2_SENSE_RESISTOR   91
-  //#define Z2_MICROSTEPS       16
+  #define Z2_MAX_CURRENT      1000
+  #define Z2_SENSE_RESISTOR   91
+  #define Z2_MICROSTEPS       16
 
   //#define Z3_MAX_CURRENT      1000
   //#define Z3_SENSE_RESISTOR   91
@@ -1328,8 +1328,8 @@
   //#define Y2_CURRENT          800
   //#define Y2_MICROSTEPS       16
 
-  //#define Z2_CURRENT          900
-  //#define Z2_MICROSTEPS       16
+  #define Z2_CURRENT          800
+  #define Z2_MICROSTEPS       16
 
   //#define Z3_CURRENT           800
   //#define Z3_MICROSTEPS       16
@@ -1361,7 +1361,7 @@
   //#define Z_CS_PIN          -1
   //#define X2_CS_PIN         -1
   //#define Y2_CS_PIN         -1
-  //#define Z2_CS_PIN          65
+  #define Z2_CS_PIN          65
   //#define Z3_CS_PIN         -1
   //#define E0_CS_PIN         -1
   //#define E1_CS_PIN         -1
@@ -1425,9 +1425,9 @@
   #define X2_HYBRID_THRESHOLD     100
   #define Y_HYBRID_THRESHOLD      100
   #define Y2_HYBRID_THRESHOLD     100
-  #define Z_HYBRID_THRESHOLD      1
-  #define Z2_HYBRID_THRESHOLD     1
-  #define Z3_HYBRID_THRESHOLD     1
+  #define Z_HYBRID_THRESHOLD      100
+  #define Z2_HYBRID_THRESHOLD     100
+  #define Z3_HYBRID_THRESHOLD     100
   #define E0_HYBRID_THRESHOLD     100
   #define E1_HYBRID_THRESHOLD     100
   #define E2_HYBRID_THRESHOLD     100
