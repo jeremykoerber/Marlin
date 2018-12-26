@@ -1334,7 +1334,7 @@
   //#define Z3_CURRENT           800
   //#define Z3_MICROSTEPS       16
 
-  #define E0_CURRENT          800
+  #define E0_CURRENT          900
   #define E0_MICROSTEPS       16
 
   //#define E1_CURRENT         800
