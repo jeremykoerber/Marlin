@@ -1,11 +1,2 @@
-from shutil import copyfile
-
-Import("env", "projenv")
-
-# access to global construction environment
-print env
-
-# access to project construction environment
-print projenv
-
-#copyfile(src, dst)
+Import("env")
+env.AlwaysBuild(env.Alias("buildfw", None, ["cp .pioenvs/megaatmega2560/firmware.hex ~/3dprint"]))

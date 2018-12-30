@@ -645,7 +645,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 95.4 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 95.84 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1100,7 +1100,7 @@
 
     // Beyond the probed grid, continue the implied tilt?
     // Default is to maintain the height of the nearest edge.
-    #define EXTRAPOLATE_BEYOND_GRID
+    //#define EXTRAPOLATE_BEYOND_GRID
 
     //
     // Experimental Subdivision of the grid by Catmull-Rom method.
@@ -1964,7 +1964,7 @@
  * LED Type. Enable only one of the following two options.
  *
  */
-//#define RGB_LED
+#define RGB_LED
 //#define RGBW_LED
 
 #if ENABLED(RGB_LED) || ENABLED(RGBW_LED)

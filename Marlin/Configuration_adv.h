@@ -205,7 +205,7 @@
 // When first starting the main fan, run it at full speed for the
 // given number of milliseconds.  This gets the fan spinning reliably
 // before setting a PWM value. (Does not work with software PWM for fan on Sanguinololu)
-//#define FAN_KICKSTART_TIME 100
+//#define FAN_KICKSTART_TIME 500
 
 /**
  * PWM Fan Scaling
@@ -415,7 +415,7 @@
 #define Z_STEPPER_AUTO_ALIGN
 #if ENABLED(Z_STEPPER_AUTO_ALIGN)
   // Define probe X and Y positions for Z1, Z2 [, Z3]
-  #define Z_STEPPER_ALIGN_X { 60, 290 }
+  #define Z_STEPPER_ALIGN_X { 48, 290 }
   #define Z_STEPPER_ALIGN_Y { 150, 150 }
   // Set number of iterations to align
   #define Z_STEPPER_ALIGN_ITERATIONS 3
