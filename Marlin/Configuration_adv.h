@@ -205,7 +205,7 @@
 // When first starting the main fan, run it at full speed for the
 // given number of milliseconds.  This gets the fan spinning reliably
 // before setting a PWM value. (Does not work with software PWM for fan on Sanguinololu)
-//#define FAN_KICKSTART_TIME 500
+#define FAN_KICKSTART_TIME 250
 
 /**
  * PWM Fan Scaling
@@ -1423,10 +1423,10 @@
    */
   #define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD      100  // [mm/s]
-  #define X2_HYBRID_THRESHOLD     100
-  #define Y_HYBRID_THRESHOLD      100
-  #define Y2_HYBRID_THRESHOLD     100
+  #define X_HYBRID_THRESHOLD      160  // [mm/s]
+  #define X2_HYBRID_THRESHOLD     160
+  #define Y_HYBRID_THRESHOLD      160
+  #define Y2_HYBRID_THRESHOLD     160
   #define Z_HYBRID_THRESHOLD      100
   #define Z2_HYBRID_THRESHOLD     100
   #define Z3_HYBRID_THRESHOLD     100
@@ -1460,8 +1460,8 @@
   //#define SENSORLESS_PROBING // TMC2130 only
 
   #if ENABLED(SENSORLESS_HOMING) || ENABLED(SENSORLESS_PROBING)
-    #define X_STALL_SENSITIVITY  5
-    #define Y_STALL_SENSITIVITY  5
+    #define X_STALL_SENSITIVITY  3
+    #define Y_STALL_SENSITIVITY  3
     #define Z_STALL_SENSITIVITY  3
 
   #endif

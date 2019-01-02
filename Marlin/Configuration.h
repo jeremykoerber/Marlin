@@ -1979,9 +1979,9 @@
 //#define RGBW_LED
 
 #if ENABLED(RGB_LED) || ENABLED(RGBW_LED)
-  #define RGB_LED_R_PIN 34
-  #define RGB_LED_G_PIN 43
-  #define RGB_LED_B_PIN 35
+  #define RGB_LED_B_PIN 52
+  #define RGB_LED_R_PIN 53
+  #define RGB_LED_G_PIN 51
   #define RGB_LED_W_PIN -1
 #endif
 
