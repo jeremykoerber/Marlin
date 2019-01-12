@@ -205,7 +205,7 @@
 // When first starting the main fan, run it at full speed for the
 // given number of milliseconds.  This gets the fan spinning reliably
 // before setting a PWM value. (Does not work with software PWM for fan on Sanguinololu)
-//#define FAN_KICKSTART_TIME 500
+#define FAN_KICKSTART_TIME 250
 
 /**
  * PWM Fan Scaling
@@ -1308,7 +1308,7 @@
   #define X_CURRENT           800  // rms current in mA. Multiply by 1.41 for peak current.
   #define X_MICROSTEPS        16  // 0..256
 
-  #define Y_CURRENT           800
+  #define Y_CURRENT           900
   #define Y_MICROSTEPS        16
 
   #define Z_CURRENT           800
@@ -1394,7 +1394,7 @@
    * Define you own with
    * { <off_time[1..15]>, <hysteresis_end[-3..12]>, hysteresis_start[1..8] }
    */
-  #define CHOPPER_TIMING CHOPPER_DEFAULT_12V
+  #define CHOPPER_TIMING CHOPPER_DEFAULT_24V
 
   /**
    * Monitor Trinamic TMC2130 and TMC2208 drivers for error conditions,
@@ -1423,14 +1423,14 @@
    */
   #define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD      100  // [mm/s]
-  #define X2_HYBRID_THRESHOLD     100
-  #define Y_HYBRID_THRESHOLD      100
-  #define Y2_HYBRID_THRESHOLD     100
-  #define Z_HYBRID_THRESHOLD      100
-  #define Z2_HYBRID_THRESHOLD     100
+  #define X_HYBRID_THRESHOLD      160  // [mm/s]
+  #define X2_HYBRID_THRESHOLD     160
+  #define Y_HYBRID_THRESHOLD      160
+  #define Y2_HYBRID_THRESHOLD     160
+  #define Z_HYBRID_THRESHOLD      160
+  #define Z2_HYBRID_THRESHOLD     160
   #define Z3_HYBRID_THRESHOLD     100
-  #define E0_HYBRID_THRESHOLD     100
+  #define E0_HYBRID_THRESHOLD     300
   #define E1_HYBRID_THRESHOLD     100
   #define E2_HYBRID_THRESHOLD     100
   #define E3_HYBRID_THRESHOLD     100
@@ -1460,9 +1460,9 @@
   //#define SENSORLESS_PROBING // TMC2130 only
 
   #if ENABLED(SENSORLESS_HOMING) || ENABLED(SENSORLESS_PROBING)
-    #define X_STALL_SENSITIVITY  5
-    #define Y_STALL_SENSITIVITY  5
-    #define Z_STALL_SENSITIVITY  3
+    #define X_STALL_SENSITIVITY  4
+    #define Y_STALL_SENSITIVITY  4
+    #define Z_STALL_SENSITIVITY  4
 
   #endif
 
