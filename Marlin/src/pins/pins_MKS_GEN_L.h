@@ -49,6 +49,4 @@
   #define Y_CS_PIN 63
 #endif
 
-#define KILL_PIN 41
-
 #include "pins_RAMPS.h"

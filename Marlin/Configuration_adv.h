@@ -492,8 +492,8 @@
 #if ENABLED(BACKLASH_COMPENSATION)
   // Define values for backlash distance and correction.
   // If BACKLASH_GCODE is enabled these values are the defaults.
-  #define BACKLASH_DISTANCE_MM { 0, 0, 0 } // (mm)
-  #define BACKLASH_CORRECTION    0.5       // 0.0 = no correction; 1.0 = full correction
+  #define BACKLASH_DISTANCE_MM { 0, 0, .11 } // (mm)
+  #define BACKLASH_CORRECTION    1.0       // 0.0 = no correction; 1.0 = full correction
 
   // Set BACKLASH_SMOOTHING_MM to spread backlash correction over multiple segments
   // to reduce print artifacts. (Enabling this is costly in memory and computation!)
@@ -1320,7 +1320,7 @@
   #define Y_CURRENT           900
   #define Y_MICROSTEPS        16
 
-  #define Z_CURRENT           800
+  #define Z_CURRENT           900
   #define Z_MICROSTEPS        16
 
   //#define X2_CURRENT           800
@@ -1329,7 +1329,7 @@
   //#define Y2_CURRENT          800
   //#define Y2_MICROSTEPS       16
 
-  #define Z2_CURRENT          800
+  #define Z2_CURRENT          900
   #define Z2_MICROSTEPS       16
 
   //#define Z3_CURRENT           800
@@ -1470,8 +1470,8 @@
 
   #if ENABLED(SENSORLESS_HOMING) || ENABLED(SENSORLESS_PROBING)
     #define X_STALL_SENSITIVITY  4
-    #define Y_STALL_SENSITIVITY  4
-    #define Z_STALL_SENSITIVITY  4
+    #define Y_STALL_SENSITIVITY  3
+    #define Z_STALL_SENSITIVITY  5
 
   #endif
 
