@@ -488,11 +488,12 @@
 // Backlash Compensation
 // Adds extra movement to axes on direction-changes to account for backlash.
 //
-#define BACKLASH_COMPENSATION
+//
+//#define BACKLASH_COMPENSATION
 #if ENABLED(BACKLASH_COMPENSATION)
   // Define values for backlash distance and correction.
   // If BACKLASH_GCODE is enabled these values are the defaults.
-  #define BACKLASH_DISTANCE_MM { 0, 0, .11 } // (mm)
+  #define BACKLASH_DISTANCE_MM { 0, 0, .5 } // (mm)
   #define BACKLASH_CORRECTION    1.0       // 0.0 = no correction; 1.0 = full correction
 
   // Set BACKLASH_SMOOTHING_MM to spread backlash correction over multiple segments
@@ -895,7 +896,7 @@
     #define MOVE_Z_IDLE_MULTIPLICATOR 1     // Multiply 1mm by this factor for the move step size.
   #endif
 
-  #define BABYSTEP_ZPROBE_OFFSET          // Combine M851 Z and Babystepping
+  //#define BABYSTEP_ZPROBE_OFFSET          // Combine M851 Z and Babystepping
   #if ENABLED(BABYSTEP_ZPROBE_OFFSET)
     //#define BABYSTEP_HOTEND_Z_OFFSET      // For multiple hotends, babystep relative Z offsets
     #define BABYSTEP_ZPROBE_GFX_OVERLAY   // Enable graphical overlay on Z-offset editor
@@ -1320,7 +1321,7 @@
   #define Y_CURRENT           900
   #define Y_MICROSTEPS        16
 
-  #define Z_CURRENT           900
+  #define Z_CURRENT           600
   #define Z_MICROSTEPS        16
 
   //#define X2_CURRENT           800
@@ -1329,7 +1330,7 @@
   //#define Y2_CURRENT          800
   //#define Y2_MICROSTEPS       16
 
-  #define Z2_CURRENT          900
+  #define Z2_CURRENT          600
   #define Z2_MICROSTEPS       16
 
   //#define Z3_CURRENT           800
