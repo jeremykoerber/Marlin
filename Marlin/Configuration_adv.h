@@ -414,7 +414,7 @@
  * Z Steppers Auto-Alignment
  * Add the G34 command to align multiple Z steppers using a bed probe.
  */
-#define Z_STEPPER_AUTO_ALIGN
+//#define Z_STEPPER_AUTO_ALIGN
 #if ENABLED(Z_STEPPER_AUTO_ALIGN)
   // Define probe X and Y positions for Z1, Z2 [, Z3]
   #define Z_STEPPER_ALIGN_X { 48, 290 }
@@ -1470,9 +1470,9 @@
   //#define SENSORLESS_PROBING // TMC2130 only
 
   #if ENABLED(SENSORLESS_HOMING) || ENABLED(SENSORLESS_PROBING)
-    #define X_STALL_SENSITIVITY  4
+    #define X_STALL_SENSITIVITY  3
     #define Y_STALL_SENSITIVITY  3
-    #define Z_STALL_SENSITIVITY  5
+    //#define Z_STALL_SENSITIVITY  5
 
   #endif
 
