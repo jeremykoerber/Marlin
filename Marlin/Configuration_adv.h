@@ -221,8 +221,8 @@
  *
  * Define one or both of these to override the default 0-255 range.
  */
-#define FAN_MIN_PWM 35
-#define FAN_MAX_PWM 200
+#define FAN_MIN_PWM 20
+//#define FAN_MAX_PWM 255
 
 // @section extruder
 
@@ -331,7 +331,7 @@
   #endif
 #endif
 
-#define Z_DUAL_STEPPER_DRIVERS
+//#define Z_DUAL_STEPPER_DRIVERS
 #if ENABLED(Z_DUAL_STEPPER_DRIVERS)
   //#define Z_DUAL_ENDSTOPS
   #if ENABLED(Z_DUAL_ENDSTOPS)
@@ -1358,15 +1358,15 @@
    * Override default SPI pins for TMC2130 and TMC2660 drivers here.
    * The default pins can be found in your board's pins file.
    */
-  //#define X_CS_PIN          -1
-  //#define Y_CS_PIN          -1
-  //#define Z_CS_PIN          -1
+  #define X_CS_PIN          63
+  #define Y_CS_PIN          40
+  #define Z_CS_PIN          42
   //#define X2_CS_PIN         -1
   //#define Y2_CS_PIN         -1
-  #define Z2_CS_PIN          65
+  //#define Z2_CS_PIN         -1
   //#define Z3_CS_PIN         -1
-  //#define E0_CS_PIN         -1
-  //#define E1_CS_PIN         -1
+  #define E0_CS_PIN         65
+  #define E1_CS_PIN         66
   //#define E2_CS_PIN         -1
   //#define E3_CS_PIN         -1
   //#define E4_CS_PIN         -1
