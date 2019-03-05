@@ -7,7 +7,7 @@
 	],
 	"settings": {
 		"terminal.integrated.env.osx": {
-			"PATH": "/Users/jeremykoerber/.platformio/penv/bin:/Users/jeremykoerber/.platformio/penv:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/opt/chefdk/bin:/Users/jeremykoerber/.chefdk/gem/ruby/2.5.0/bin:/opt/chefdk/embedded/bin:/private/var/folders/_x/pw6q97bj5bd_v56cwd__1vwc0000gp/T:/usr/local/packer:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/ec2/ec2-api-tools-1.7.3.2/bin:/Users/jeremykoerber/.chefdk/gem/ruby/2.4.0/bin:/opt/chefdk/bin:/opt/chefdk/embedded/bin:/Users/jeremykoerber/Library/Python/3.6/bin:/Users/jeremykoerber/go/bin:/opt/chefdk/gitbin",
+			"PATH": "/Users/jeremykoerber/.platformio/penv/bin:/Users/jeremykoerber/.platformio/penv:/usr/bin:/bin:/usr/sbin:/sbin",
 			"PLATFORMIO_CALLER": "vscode"
 		},
 		"python.pythonPath": "/Users/jeremykoerber/.platformio/penv/bin/python"
