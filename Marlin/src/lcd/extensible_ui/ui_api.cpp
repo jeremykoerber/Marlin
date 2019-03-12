@@ -51,8 +51,13 @@
 #include "../../module/planner.h"
 #include "../../module/probe.h"
 #include "../../module/temperature.h"
+#include "../../module/printcounter.h"
 #include "../../libs/duration_t.h"
 #include "../../HAL/shared/Delay.h"
+
+#if ENABLED(PRINTCOUNTER)
+  #include "../../core/utility.h"
+#endif
 
 #if DO_SWITCH_EXTRUDER || ENABLED(SWITCHING_NOZZLE) || ENABLED(PARKING_EXTRUDER)
   #include "../../module/tool_change.h"
@@ -67,11 +72,6 @@
   #define IFSD(A,B) (A)
 #else
   #define IFSD(A,B) (B)
-#endif
-
-#if ENABLED(PRINTCOUNTER)
-  #include "../../core/utility.h"
-  #include "../../module/printcounter.h"
 #endif
 
 #if HAS_TRINAMIC && HAS_LCD_MENU
@@ -530,7 +530,7 @@ namespace ExtUI {
     }
   #endif // HAS_BED_PROBE
 
-  #if HOTENDS > 1
+  #if HAS_HOTEND_OFFSET
 
     float getNozzleOffset_mm(const axis_t axis, const extruder_t extruder) {
       if (extruder - E0 >= HOTENDS) return 0;
@@ -552,7 +552,7 @@ namespace ExtUI {
       HOTEND_LOOP() hotend_offset[axis][e] -= offs;
     }
 
-  #endif // HOTENDS > 1
+  #endif // HAS_HOTEND_OFFSET
 
   #if ENABLED(BACKLASH_GCODE)
     float getAxisBacklash_mm(const axis_t axis)       { return backlash_distance_mm[axis]; }
@@ -569,7 +569,7 @@ namespace ExtUI {
   #endif
 
   uint8_t getProgress_percent() {
-    return IFSD(card.percentDone(), 0);
+    return ui.get_progress();
   }
 
   uint32_t getProgress_seconds_elapsed() {
@@ -609,7 +609,7 @@ namespace ExtUI {
     const int16_t e = heater - H0;
     #if HAS_HEATED_BED
       if (heater == BED)
-        thermalManager.setTargetBed(clamp(value, 0, BED_MAXTEMP - 15));
+        thermalManager.setTargetBed(clamp(value, 0, BED_MAXTEMP - 10));
       else
     #endif
         thermalManager.setTargetHotend(clamp(value, 0, heater_maxtemp[e] - 15), e);
@@ -628,6 +628,12 @@ namespace ExtUI {
 
   void setFeedrate_percent(const float value) {
     feedrate_percentage = clamp(value, 10, 500);
+  }
+
+  void setUserConfirmed(void) {
+    #if HAS_RESUME_CONTINUE
+      wait_for_user = false;
+    #endif
   }
 
   void printFile(const char *filename) {
